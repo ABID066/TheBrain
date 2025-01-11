@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "b391634b7270f8cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "87027d88680ceb9a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8993eb11381f4584",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MERN learning/Node JS/JSON file.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ba889beb50e4fd50",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb817f9b37cba239",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c908e7271534713",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ec1facc766aeb0c0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1f1c1b93e1b94211",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "53914ece33cb7ba3",
+    "type": "split",
+    "children": [
+      {
+        "id": "604c99dc8e5afe13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "482458457241afd3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MERN learning/Node JS/JSON file.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cc1c0cd4dd3ebaa6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MERN learning/Node JS/JSON file.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "abde781fc6f0fbda",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "91da4046d22996a3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MERN learning/Node JS/JSON file.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "8993eb11381f4584",
+  "lastOpenFiles": [
+    "MERN learning/Express JS/Perfect way to write the Code/The Perfect way & ES5.md",
+    "MERN learning/Express JS/Perfect way to write the Code/ES6.md",
+    "MERN learning/Express JS/Perfect way to write the Code/ES5.md",
+    "MERN learning/Node JS/Request Response Model.md",
+    "MERN learning/Node JS/JSON file.md",
+    "MERN learning/Node JS/First Node JS Website.md",
+    "MERN learning/Node JS/File System/Synchronous.md",
+    "MERN learning/Node JS/File System/Asynchronous.md",
+    "MERN learning/Express JS/Multer for File Uploading.md",
+    "MERN learning/Express JS/Introduction on Express JS.md",
+    "MERN learning/MongoDB/Introduction.md",
+    "Untitled.canvas",
+    "2024-05-30.md"
+  ]
+}

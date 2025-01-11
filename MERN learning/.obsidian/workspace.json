@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "a51eca0b0d898c84",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6f8f9189d17eec2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c05c52fcadb97dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git & GitHub/Git Command.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git Command"
+            }
+          },
+          {
+            "id": "0362c4aa2105e1bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git & GitHub/Git Log.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git Log"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c58bf355055bfc06",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ed949fe3117640c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8242e30878d9e3c4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "daf014ee4b71f62b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "df601f1a43a7d03d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 253.5
+  },
+  "right": {
+    "id": "66994009d378024c",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e1520070cdc666e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7932217b4dac942",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MongoDB/The Aggregate Function.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for The Aggregate Function"
+            }
+          },
+          {
+            "id": "391e7066e98a557f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MongoDB/The Aggregate Function.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from The Aggregate Function"
+            }
+          },
+          {
+            "id": "83e2b113de6d5637",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6b2b9c61160298a2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MongoDB/The Aggregate Function.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of The Aggregate Function"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0362c4aa2105e1bf",
+  "lastOpenFiles": [
+    "Git & GitHub/Git Diff.md",
+    "Git & GitHub/Git Command.md",
+    "Git & GitHub/Git Add & Reset.md",
+    "Git & GitHub/Git Log.md",
+    "dsff.md",
+    "Git & GitHub",
+    "React/Conditional Rendering in React.md",
+    "Express JS/Introduction on Express JS.md",
+    "Express JS/Perfect way to write the Code/ES5.md",
+    "Express JS/Perfect way to write the Code/ES6.md",
+    "MongoDB/The Aggregate Function.md",
+    "React/React Project Setup with Vite.md",
+    "React/React Dom.md",
+    "Mongoose/To Do List Project.md",
+    "Mongoose/Practice Project.md",
+    "Express JS/Perfect way to write the Code/The Perfect way & ES5.md",
+    "React/Notes on Functions Used.md",
+    "Full-Stack  Devlelopment/Connection.md",
+    "Full-Stack  Devlelopment/FrontEnd Development.md",
+    "Mongoose/Just Remember Mongoose.md",
+    "MongoDB/Basic Query.md",
+    "MongoDB/Advance Query with Aggregation.md",
+    "Full-Stack  Devlelopment/BackEnd Development.md",
+    "Express JS/Multer for File Uploading.md",
+    "Node JS/JSON file.md",
+    "Node JS/Request Response Model.md",
+    "Node JS/First Node JS Website.md",
+    "Pasted image 20240501141243.png",
+    "Pasted image 20240504232512.png",
+    "Pasted image 20240504233542.png",
+    "Pasted image 20240617220815.png",
+    "Pasted image 20240621171447.png",
+    "Pasted image 20240621171447 1.png",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Full-Stack  Devlelopment",
+    "React/Starting",
+    "React",
+    "Mongoose/Untitled",
+    "Mongoose",
+    "MongoDB",
+    "Express JS/Perfect way to write the Code",
+    "Pasted image 20240501135340.png",
+    "Pasted image 20240501135340 1.png",
+    "Pasted image 20240501134924.png",
+    "Pasted image 20240501134905.png",
+    "Express JS",
+    "Node JS/File System"
+  ]
+}
