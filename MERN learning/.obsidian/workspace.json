@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d6f8f9189d17eec2",
+        "id": "4442f45e29ba8d9f",
         "type": "tabs",
         "children": [
           {
-            "id": "7c05c52fcadb97dd",
+            "id": "f6c820eedeb36d09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git & GitHub/Git Command.md",
+                "file": "MongoDB/The Aggregate Function.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Command"
-            }
-          },
-          {
-            "id": "0362c4aa2105e1bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git & GitHub/Git Log.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git Log"
+              "title": "The Aggregate Function"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 200
   },
   "right": {
     "id": "66994009d378024c",
@@ -177,35 +162,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0362c4aa2105e1bf",
+  "active": "f6c820eedeb36d09",
   "lastOpenFiles": [
-    "Git & GitHub/Git Diff.md",
-    "Git & GitHub/Git Command.md",
-    "Git & GitHub/Git Add & Reset.md",
-    "Git & GitHub/Git Log.md",
-    "dsff.md",
-    "Git & GitHub",
-    "React/Conditional Rendering in React.md",
-    "Express JS/Introduction on Express JS.md",
-    "Express JS/Perfect way to write the Code/ES5.md",
-    "Express JS/Perfect way to write the Code/ES6.md",
-    "MongoDB/The Aggregate Function.md",
-    "React/React Project Setup with Vite.md",
-    "React/React Dom.md",
-    "Mongoose/To Do List Project.md",
-    "Mongoose/Practice Project.md",
-    "Express JS/Perfect way to write the Code/The Perfect way & ES5.md",
-    "React/Notes on Functions Used.md",
-    "Full-Stack  Devlelopment/Connection.md",
-    "Full-Stack  Devlelopment/FrontEnd Development.md",
-    "Mongoose/Just Remember Mongoose.md",
     "MongoDB/Basic Query.md",
     "MongoDB/Advance Query with Aggregation.md",
-    "Full-Stack  Devlelopment/BackEnd Development.md",
+    "MongoDB/The Aggregate Function.md",
+    "Full-Stack  Devlelopment/FrontEnd Development.md",
+    "React/Notes on Functions Used.md",
+    "React/Conditional Rendering in React.md",
+    "React/React Project Setup with Vite.md",
+    "React/React Dom.md",
+    "Full-Stack  Devlelopment/Connection.md",
     "Express JS/Multer for File Uploading.md",
+    "Express JS/Perfect way to write the Code/The Perfect way & ES5.md",
+    "Git & GitHub/Git Command.md",
+    "Git & GitHub/Git Diff.md",
+    "Git & GitHub/Git Log.md",
+    "Full-Stack  Devlelopment/BackEnd Development.md",
+    "Full-Stack  Devlelopment/JWT Token.md",
+    "Express JS/Perfect way to write the Code/ES5.md",
+    "Express JS/Perfect way to write the Code/ES6.md",
+    "Express JS/Introduction on Express JS.md",
+    "Mongoose/Just Remember Mongoose.md",
+    "Mongoose/To Do List Project.md",
+    "Mongoose/Practice Project.md",
+    "Node JS/File System/Asynchronous.md",
     "Node JS/JSON file.md",
     "Node JS/Request Response Model.md",
-    "Node JS/First Node JS Website.md",
+    "Node JS/File System/Synchronous.md",
+    "Git & GitHub",
     "Pasted image 20240501141243.png",
     "Pasted image 20240504232512.png",
     "Pasted image 20240504233542.png",

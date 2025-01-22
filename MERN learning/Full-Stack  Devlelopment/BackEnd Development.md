@@ -79,10 +79,24 @@
 ### Index.js
 
 ```js
-const app = require("./app");  
-app.listen(8080, function () {  
-    console.log("Server started on port 8080");  
-})
+
+const app = require("./app")  
+const dotenv = require("dotenv")  
+  
+dotenv.config({ path: "./config.env" })  
+  
+app.listen(process.env.RUNNING_PORT, function (){  
+    console.log("Runnig at "+process.env.RUNNING_PORT);  
+});
+
+```
+
+
+### .env
+
+```js
+RUNNING_PORT=8080
+
 ```
 
 
@@ -302,3 +316,6 @@ exports.deleteProduct=async (req,res)=>{
 ```
 - Then edit `package.json` file
 - Just add `"engines": {"node": "20.x"},` After the third line
+
+
+

@@ -78,9 +78,45 @@ db.employees.find(
         city: 1
     }
 )
-
 ```
 
+
+When condition is in a single object
+```js
+
+use('CraftShop');
+db.employees.find(
+    {
+        salary: { $gt: 80000 },
+        designation: "Engineer"
+    },
+    {
+        _id: 0,
+        name: 1,
+        designation: 1,
+        salary: 1,
+        city: 1
+    }
+);
+```
+
+
+When condition is in multiple object
+```js
+use("CraftShop");
+db.employees.find(
+    {
+        $and: [
+            { salary: { $gte: 90000 } },
+            { city: { $eq: "Dhaka" } }
+        ]
+    },
+    {
+        _id: 0
+    }
+);
+
+```
 
 #### Multiple condition Using Logical Operator
   
@@ -139,6 +175,7 @@ db.employees.find({
 
 #### Evaluation Query Operator : Expression 
 
+						just comparing
 ```js
 use('CraftShop')
 
@@ -173,8 +210,7 @@ db.monthlyBudget.find({
 use('CraftShop')
 
 db.monthlyBudget.find({
-    budget:{$mod:[4,1]}
-}) 
+    budget:{$mod:[4,1]}   //Divided by 4 but at the end (ভাগশেষ) is 1
 ```
 
 #### Evaluation Query Operator :  Regular Expression
@@ -184,7 +220,7 @@ use('CraftShop')
 
 db.employees.find({
     name:{$regex:"An"}
-}) regex 
+})  
 
 ```
 
@@ -199,7 +235,7 @@ db.brands.find().sort({
 }) 
 ```
 
-- count total number of data
+- count total **Number of Data** or **Number of Row**
 ```js
 use('CraftShop')
 

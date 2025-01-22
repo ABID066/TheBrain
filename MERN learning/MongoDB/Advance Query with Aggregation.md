@@ -1,4 +1,5 @@
-##### Counting Number of Row
+
+#### Counting Number of Row
 
 ```js
 
@@ -8,6 +9,8 @@ db.employees.aggregate([
 
 ])
 ```
+
+
 #### Sorting, Skipping & Selecting
 
 ```js
@@ -39,6 +42,9 @@ db.employees.aggregate([
 //Same code
 db.employees.find({}).sort({"_id":-1}).skip(2).limit(2)
 ```
+
+
+
 #### Find data using `$match` condition
 
 ```js
@@ -48,6 +54,8 @@ db.employees.aggregate([
  
 ])
 ```
+
+
 
 #### Using `$match` with multiple condition
 
@@ -78,6 +86,8 @@ db.employees.aggregate([
 ])
 ```
 
+
+
 #### Select alike data
 
 ```js 
@@ -89,6 +99,8 @@ db.employees.aggregate([
 db.employees.find({designation:/Eng/})
 ```
 
+
+
 #### Projection the data by Column
 
 ```js
@@ -99,13 +111,18 @@ db.employees.aggregate([
 ])
 ```
 
-#### Show data by Group
+
+
+### Show data by Group
+
 
 ##### Show only unique data
 ```js
 db.employees.aggregate([
 
-	{$group:{_id:"$designation"}}
+	{$group:{_id:"$city"}}  
+	
+	//In here, _id is not that you think. This is the property of $group
 
 ])
 
@@ -207,34 +224,43 @@ db.employees.aggregate([
 ```
 
 
+
+#### Add a new column & Set value with condition
+
+- Add a column and the values of this column depend on the value of the price
 ```js
 db.products.aggregate([
 
-{$addFields:{something:{$gte:[{$toDouble:"$price"} ,12000]}}},
+{
+	$addFields:{
+		something:{
+			$gte:[{$toDouble:"$price"} ,12000]
+		}
+	}
+},
 
 {$match:{"something" : false}}
 
 ])
 ```
 
+
+- Add a column and the values of this column depend on the value of the price and city.
+- if both condition is true then it will be true.
 ```js
 db.employees.aggregate([
 
 {
-
-$addFields:{something:{$and:
-
-[
-
-{$gt:["$salary",80000]},
-
-{$eq:["$city","Dhaka"]}
-
-]
-
-}}
-
-},
+    $addFields: {
+        something: {
+            $and: [
+                { $gt: ["$salary", 80000] },
+                { $eq: ["$city", "Dhaka"] }
+            ]
+        }
+    }
+}
+,
 
 {$match:{"something" : true}}
 
@@ -243,5 +269,38 @@ $addFields:{something:{$and:
 
 
 ```js
+db.employees.aggregate([
+    {
+        $addFields: {
+            value: {
+                $switch: {
+                    branches: [
+                        {
+                            case: { $and: [
+                            
+		 { $gt: ["$salary", 80000] }, 
+		{ $eq: ["$city", "Dhaka"] }
+										
+					                    ] 
+					                },
+                            then: 30
+                        },
+                        {
+                            case: { $gt: ["$salary", 60000] },
+                            then: 20
+                        },
+                        {
+                            case: { $eq: ["$city", "Mumbai"] },
+                            then: 10
+                        }
+                    ],
+                    
+                    default: 0
+	                // Default value if no conditions match
+                }
+            }
+        }
+    }   
+]);
 
 ```
