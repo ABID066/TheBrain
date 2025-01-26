@@ -1,80 +1,3 @@
-### Introduction
-
-
-- `npm init --y`
-
--  `npm i express`
-
--  `npm i `
-
--  `npm run build` 
-
-- `create index.js and app.js`
-
-- `npm i body-parser`
-
-- `npm i jsonwebtoken`
-
-- `npm i mongoose`
-
--  `npm i cors`
-
-- `npm i express-mongo-sanitize`
-
--  `npm i express-rate-limit`
-
-- `npm i helmet`
-
--  `npm i hpp`
-
-- `npm i xss-clean`
-
-- `npm i dotenv`
-
-- `npm i nodemon`
-
-- `npm i nodemailer`
-
-- create `.env` file and `src` folder and SO ON 
-
-- then in `src/routes` create api.js 
-
-- `CONTINUE `
-
-
-### package.json 
-
-```json
-{  
-  "name": "back-end",  
-  "version": "1.0.0",  
-  "main": "index.js",  
-  "scripts": {  
-    "test": "echo \"Error: no test specified\" && exit 1"  },  
-  "keywords": [],  
-  "author": "",  
-  "license": "ISC",  
-  "description": "",  
-  "dependencies": {  
-    "body-parser": "^1.20.2",  
-    "cors": "^2.8.5",  
-    "dotenv": "^16.4.5",  
-    "express": "^4.19.2",  
-    "express-mongo-sanitize": "^2.2.0",  
-    "express-rate-limit": "^7.3.1",  
-    "helmet": "^7.1.0",  
-    "hpp": "^0.2.3",  
-    "jsonwebtoken": "^9.0.2",  
-    "mongoose": "^8.4.5",  
-    "nodemailer": "^6.9.14",  
-    "xss-clean": "^0.1.4"  
-  },  
-  "devDependencies": {  
-    "nodemon": "^3.1.4"  
-  }  
-}
-```
-
 
 ### Index.js
 
@@ -94,8 +17,13 @@ app.listen(process.env.RUNNING_PORT, function (){
 
 ### .env
 
-```js
-RUNNING_PORT=8080
+``` js
+RUNNING_PORT=8080  
+  
+JWT_SECRET="password4545"  
+  
+  
+URL="mongodb+srv://abidAdmin:1234@cluster0.z72chbc.mongodb.net/blogs"
 
 ```
 
@@ -103,46 +31,59 @@ RUNNING_PORT=8080
 ### App.js
 
 ```js
-const express =require('express');  
-const router = require('./src/routes/api');  
-const app = new express();  
-const rateLimit = require('express-rate-limit');  
-const helmet = require('helmet');  
-const hpp = require('hpp');  
-const cors= require('cors');  
-const mongoose = require('mongoose');  
+const express = require('express');  
+const router = require("./src/routes/api")  
+const app = express();  
+const mongoose = require("mongoose");  
+const dotenv = require("dotenv")  
+const bodyParser = require("body-parser");  
   
-//Cors  
+dotenv.config({ path: "./config.env" })  
+  
+//Security Middleware  
+const rateLimit = require("express-rate-limit");  
+const helmet = require("helmet");  
+const mongoSanitize = require("express-mongo-sanitize");  
+const hpp = require("hpp");  
+const xss =require("xss-clean")  
+const cors = require("cors");  
+  
+  
 app.use(cors());  
+app.use(helmet());  
+app.use(mongoSanitize());  
+app.use(xss());  
+app.use(hpp());  
   
-//Security  
-app.use(helmet())  
-app.use(hpp())  
-app.use(express.json({limit:'20mb'}))  
-app.use(express.urlencoded({extended: true}))  
   
-let limiter = rateLimit({windowMs: 15*60*1000,max: 3000})  
+const limiter = rateLimit({  
+    windowMs: 60*15*1000,  
+    max: 100  
+})  
 app.use(limiter);  
   
-//Mongoose  
-let URL = "mongodb+srv://abidAdmin:1234@cluster0.z72chbc.mongodb.net/CRUD_Application"  
+app.use(bodyParser.json())  
+  
+//Database connection  
+  
+let URL= process.env.URL;  
+//let URL ="mongodb+srv://abidAdmin:1234@cluster0.z72chbc.mongodb.net/blogs"  
 let OPTION = {user:"", autoIndex: true}  
 mongoose.connect(URL, OPTION).then((res)=>{  
-    console.log("Connected")  
+    console.log("Database Connected")  
 }).catch((err)=>{  
     console.log(err)  
 })  
   
+app.use("/api/v1",router)  
   
-//Route  
-app.use("/api/v1", router);  
-  
-//404 not found  
-app.use("*",(req,res)=>{  
-    res.status(404).json({data: "Not & Nor Found"})  
+//Undefined Route  
+app.use("*",(req, res)  =>{  
+    res.status(404).json({msg:"Wrong URL"})  
 })  
   
-module.exports=app;
+  
+module.exports = app;
 ```
 
 
@@ -162,11 +103,20 @@ router.get("/readOneProduct/:id", productController.readOneProduct);
 router.get("/updateProduct/:id", productController.updateProduct);  
 router.get("/deleteProduct/:id", productController.deleteProduct);  
   
-  
+
+//show all students with projection  
+router.get("/all-students-projection",TokenVerifyMiddleware,StudentsController.ReadStudentsWithProjection) 
+
+//show oen student
+router.get("/student/:id",TokenVerifyMiddleware,StudentsController.ReadOneStudent) 
+
 module.exports = router;
 
 ```
 
+```
+localhost:8080/api/v1/all-students-projection?fields=name roll class
+```
 ### Model.js
 
 ```js
@@ -244,11 +194,53 @@ exports.deleteProduct=async (req,res)=>{
 }
 ```
 
+```js
+//Read All Data with Projection  
+exports.ReadStudentsWithProjection = async (req, res) => {  
+    try {  
+        // Get projection fields from query parameters, or default to some fields  
+        const projection = req.query.fields ;  
+  
+        // Use projection to query the database  
+        const data = await StudentsModel.find({}, projection.split(" ").join(" "));  
+  
+        res.json({ status: "success", message: data });  
+    } catch (err) {  
+        res.status(500).json({ status: "fail", message: err.message });  
+    }  
+};  
+  
+//Read One Student also with projection  
+exports.ReadOneStudent=async (req,res)=>{  
+    try {  
+        let {id} = req.params  
+        const projection = "name roll class";  
+        let data = await StudentsModel.findOne({_id:id}, projection.split(" ").join(" "));  
+        res.json({status:"success",message:data});  
+    }catch(err){  
+        res.json({status:"fail",message:err.toString()});  
+    }  
+}
+```
+
 
 ### Middleware.js
 
 ```js
-
+const jwt = require("jsonwebtoken");  
+  
+exports.TokenVerifyMiddleware=(req,res,next)=>{  
+    let token = req.headers["token-key"];  
+  
+    jwt.verify(token, process.env.JWT_SECRET, (err,decoded) => {  
+        if(err){  
+            res.status(401).json({status:"Invalid Token",message:err.toString()});  
+        }  
+        else {  
+            next();  
+        }  
+    })  
+}
 ```
 
 
