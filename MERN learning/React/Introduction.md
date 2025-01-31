@@ -35,6 +35,9 @@ import "bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 ```
 
+##### Install React-Router-Dom
+
+- `npm i react-router-dom`
 
 ##### Install Milligram in React 
 
