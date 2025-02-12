@@ -116,7 +116,5 @@ export default Hero;
 
 
 
-# React Hook(useRef, useState, useEffect), Router DOM, Link & NavLink for Router, Browser Router VS HashRouter, Passing Parameter Via Naviagation
 
-**Everything will be in Module 16**
 

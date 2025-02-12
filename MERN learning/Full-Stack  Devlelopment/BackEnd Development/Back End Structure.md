@@ -123,7 +123,7 @@ localhost:8080/api/v1/all-students-projection?fields=name roll class
 const mongoose = require('mongoose');  
 
 //This the just DEMO, Create WHAT EVER YOU WANT
-const DatabaseSchema = mongoose.Schema({  
+const DatabaseSchema =new mongoose.Schema({  
     name: {type: String, required: true},  
     code: {type: String, required: true},  
     img: {type: String, required: true},  
@@ -132,7 +132,7 @@ const DatabaseSchema = mongoose.Schema({
     price: {type: Number, required: true}  
 },{timestamps: true, versionKey: false});  
   
-const productModel = mongoose.model('Products', DatabaseSchema);  
+const productModel = mongoose.model('Products', DataSchema);  
   
 module.exports = productModel;
 ```
@@ -143,7 +143,7 @@ module.exports = productModel;
 ```js
 const productModel = require("../models/productModel");  
   
-  
+//create
 exports.createProduct=async (req,res)=>{  
     try {  
         let reqBody = req.body;  
@@ -153,7 +153,8 @@ exports.createProduct=async (req,res)=>{
         res.json({status:"fail",message:err.toString()});  
     }  
 }  
-  
+
+//read all
 exports.readProduct=async (req,res)=>{  
     try {  
   
@@ -163,6 +164,8 @@ exports.readProduct=async (req,res)=>{
         res.json({status:"fail",message:err.toString()});  
     }  
 }  
+
+//read one
 exports.readOneProduct=async (req,res)=>{  
     try {  
         let {id} = req.params  
@@ -172,7 +175,8 @@ exports.readOneProduct=async (req,res)=>{
         res.json({status:"fail",message:err.toString()});  
     }  
 }  
-  
+
+//update
 exports.updateProduct=async (req,res)=>{  
     try {  
         let { id } = req.params;  
@@ -182,7 +186,8 @@ exports.updateProduct=async (req,res)=>{
         res.json({status:"fail",message:err.toString()});  
     }  
 }  
-  
+
+//delete
 exports.deleteProduct=async (req,res)=>{  
     try {  
         let { id } = req.params;  
