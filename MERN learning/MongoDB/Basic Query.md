@@ -219,7 +219,10 @@ db.monthlyBudget.find({
 use('CraftShop')
 
 db.employees.find({
-    name:{$regex:"An"}
+    name:{
+		$regex:"An",  //used for keyword searching
+	    "$options":"i"  //work with both  lowercase & uppercase
+	}
 })  
 
 ```

@@ -23,6 +23,10 @@ db.products.aggregate([
 ])
 ```
 
+```js
+{$unwind: "$categoriesDetails"},   //used to Deconstructs an array field
+{$unwind: "$brandDetails"},
+```
 #### Comprehensive Product Data Retrieval
 
 This MongoDB aggregation pipeline for the `products` collection in the `Ecommerce` database enhances product documents by performing the following operations

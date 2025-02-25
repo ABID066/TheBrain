@@ -304,3 +304,26 @@ db.employees.aggregate([
 ]);
 
 ```
+
+
+### Deconstructs an array field ($unwind):
+
+- when data is insert like this
+
+```js
+db.inventory.insertOne({ "_id" : 1, "item" : "ABC1", sizes: [ "S", "M", "L"] })
+```
+
+- Then use this
+
+```js
+db.inventory.aggregate( [ { $unwind : "$sizes" } ] )
+```
+
+- And the result will be
+
+```json
+{ "_id" : 1, "item" : "ABC1", "sizes" : "S" },
+{ "_id" : 1, "item" : "ABC1", "sizes" : "M" }, 
+{ "_id" : 1, "item" : "ABC1", "sizes" : "L" }
+```
