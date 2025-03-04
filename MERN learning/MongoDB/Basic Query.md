@@ -245,6 +245,10 @@ use('CraftShop')
 db.brands.find().count('total')
 ```
 
+```js
+let total = await UserModel.countDocuments({ email: email, otp: otp });
+```
+
 - select last two data of the table or collection
 ```js
 use('CraftShop')
@@ -280,3 +284,26 @@ db.employees.deleteMany({
 ```
 
 
+#### Update Operation
+
+```js
+const result = await User.updateOne(
+
+		{ name: "John Doe" }, // Filter
+
+		{ $set: { age: 30 } } // Update
+	
+	);
+```
+
+```js
+const result = await User.updateOne( 
+
+		{ name: "Alice" },   // Filter: Find user with name "Alice" 
+		
+		{ $set: { age: 28 } }, // Update: Set age to 28 
+		
+		{ upsert: true } // If not found, insert a new document 
+	
+	);
+```
