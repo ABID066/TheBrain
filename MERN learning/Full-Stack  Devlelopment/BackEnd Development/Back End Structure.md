@@ -37,6 +37,7 @@ const app = express();
 const mongoose = require("mongoose");  
 const dotenv = require("dotenv")  
 const bodyParser = require("body-parser");  
+const cookieParser = require("cookie-parser");
   
 dotenv.config({ path: "./config.env" })  
   
@@ -63,6 +64,7 @@ const limiter = rateLimit({
 app.use(limiter);  
   
 app.use(bodyParser.json())  
+app.use(cookieParser());
   
 //Database connection  
   
@@ -123,7 +125,7 @@ localhost:8080/api/v1/all-students-projection?fields=name roll class
 const mongoose = require('mongoose');  
 
 //This the just DEMO, Create WHAT EVER YOU WANT
-const DatabaseSchema =new mongoose.Schema({  
+const DataSchema =new mongoose.Schema({  
     name: {type: String, required: true},  
     code: {type: String, required: true},  
     img: {type: String, required: true},  

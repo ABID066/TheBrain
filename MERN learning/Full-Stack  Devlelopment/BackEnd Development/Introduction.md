@@ -51,6 +51,7 @@
   "main": "index.js",  
   "scripts": {  
     "test": "echo \"Error: no test specified\" && exit 1"  },  
+    "dev": "nodemon index.js"
   "keywords": [],  
   "author": "",  
   "license": "ISC",  
@@ -74,3 +75,5 @@
 }
 ```
 
+- by adding this line - `"dev": "nodemon index.js"` after 5 lines, it will run the back-end with a single command.
+- And that is `npm run dev`

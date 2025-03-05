@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MongoDB/Basic Query.md",
+                "file": "Full-Stack  Devlelopment/BackEnd Development/Recover The Password.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basic Query"
+              "title": "Recover The Password"
             }
           }
         ],
@@ -194,11 +194,15 @@
   },
   "active": "160cc9422cd0a7b6",
   "lastOpenFiles": [
+    "Full-Stack  Devlelopment/BackEnd Development/User Login, Registration & Update.md",
+    "Full-Stack  Devlelopment/BackEnd Development/Recover The Password.md",
+    "Full-Stack  Devlelopment/BackEnd Development/JWT Token.md",
+    "Full-Stack  Devlelopment/BackEnd Development/Back End Structure.md",
+    "Full-Stack  Devlelopment/BackEnd Development/Introduction.md",
     "MongoDB/The Aggregate Function.md",
     "MongoDB/Advance Query with Aggregation.md",
     "MongoDB/Basic Query.md",
     "Mongoose/Just Remember Mongoose.md",
-    "Full-Stack  Devlelopment/BackEnd Development/Back End Structure.md",
     "Mongoose/Practice Project.md",
     "Mongoose/To Do List Project.md",
     "React/Conditional Rendering in React.md",
@@ -208,8 +212,6 @@
     "React/React Hook.md",
     "React/React-Redux.md",
     "Full-Stack  Devlelopment/Connection.md",
-    "Full-Stack  Devlelopment/BackEnd Development/JWT Token.md",
-    "Full-Stack  Devlelopment/BackEnd Development/Introduction.md",
     "Git & GitHub/Git Command.md",
     "Git & GitHub/Git Add & Reset.md",
     "Git & GitHub/Git Diff.md",
@@ -219,8 +221,6 @@
     "Full-Stack  Devlelopment/FrontEnd Development.md",
     "Pasted image 20250211191954.png",
     "Express JS/Multer for File Uploading.md",
-    "Express JS/Introduction on Express JS.md",
-    "Express JS/Perfect way to write the Code/The Perfect way & ES5.md",
     "Full-Stack  Devlelopment/BackEnd Development",
     "Git & GitHub",
     "Pasted image 20240501141243.png",
