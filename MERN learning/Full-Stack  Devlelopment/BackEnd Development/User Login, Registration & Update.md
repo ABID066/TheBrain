@@ -112,6 +112,9 @@ exports.profileDetails = async (req, res) => {
 ```
 
 
+
+# AuthVerification.js
+
 ```js
 const jwt = require("jsonwebtoken");  
   
