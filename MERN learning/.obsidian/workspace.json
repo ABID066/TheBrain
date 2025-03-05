@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Full-Stack  Devlelopment/BackEnd Development/Recover The Password.md",
-                "mode": "preview",
+                "file": "Full-Stack  Devlelopment/BackEnd Development/Back End Structure.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Recover The Password"
+              "title": "Back End Structure"
             }
           }
         ],
@@ -196,8 +196,8 @@
   "lastOpenFiles": [
     "Full-Stack  Devlelopment/BackEnd Development/User Login, Registration & Update.md",
     "Full-Stack  Devlelopment/BackEnd Development/Recover The Password.md",
-    "Full-Stack  Devlelopment/BackEnd Development/JWT Token.md",
     "Full-Stack  Devlelopment/BackEnd Development/Back End Structure.md",
+    "Full-Stack  Devlelopment/BackEnd Development/JWT Token.md",
     "Full-Stack  Devlelopment/BackEnd Development/Introduction.md",
     "MongoDB/The Aggregate Function.md",
     "MongoDB/Advance Query with Aggregation.md",

@@ -150,9 +150,9 @@ exports.createProduct=async (req,res)=>{
     try {  
         let reqBody = req.body;  
         await productModel.create(reqBody);  
-        res.json({status:"success",message:"Product created"});  
+        res.status(200).json({status:"success",message:"Product created"});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }  
 
@@ -161,9 +161,9 @@ exports.readProduct=async (req,res)=>{
     try {  
   
         let data = await productModel.find();  
-        res.json({status:"success",message:data});  
+        res.status(200).json({status:"success",message:data});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }  
 
@@ -172,9 +172,9 @@ exports.readOneProduct=async (req,res)=>{
     try {  
         let {id} = req.params  
         let data = await productModel.findOne({_id:id});  
-        res.json({status:"success",message:data});  
+        res.status(200).json({status:"success",message:data});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }  
 
@@ -182,10 +182,16 @@ exports.readOneProduct=async (req,res)=>{
 exports.updateProduct=async (req,res)=>{  
     try {  
         let { id } = req.params;  
-        await productModel.updateOne({_id:id},req.body);  
-        res.json({status:"success",message:"Product updated"});  
+        let result = await productModel.updateOne({_id:id},req.body);  
+        if (result.modifiedCount === 0) {  
+			return res.status(404).json({ 
+				status: "fail", 
+				message: "data not found or no changes made" 
+			});  
+		}
+        res.status(200).json({status:"success",message:"Product updated"});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }  
 
@@ -193,10 +199,16 @@ exports.updateProduct=async (req,res)=>{
 exports.deleteProduct=async (req,res)=>{  
     try {  
         let { id } = req.params;  
-        await productModel.deleteOne({_id:id});  
-        res.json({status:"success",message:"Product deleted"});  
+        let result = await productModel.deleteOne({_id:id});  
+        if (result.deletedCount === 0) {  
+		    return res.status(404).json({ 
+			    status: "fail", 
+			    message: "Product not found" 
+			});  
+		}
+        res.status(200).json({status:"success",message:"Product deleted"});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }
 ```
@@ -211,7 +223,7 @@ exports.ReadStudentsWithProjection = async (req, res) => {
         // Use projection to query the database  
         const data = await StudentsModel.find({}, projection.split(" ").join(" "));  
   
-        res.json({ status: "success", message: data });  
+        res.status(200).json({ status: "success", message: data });  
     } catch (err) {  
         res.status(500).json({ status: "fail", message: err.message });  
     }  
@@ -223,9 +235,9 @@ exports.ReadOneStudent=async (req,res)=>{
         let {id} = req.params  
         const projection = "name roll class";  
         let data = await StudentsModel.findOne({_id:id}, projection.split(" ").join(" "));  
-        res.json({status:"success",message:data});  
+        res.status(200).json({status:"success",message:data});  
     }catch(err){  
-        res.json({status:"fail",message:err.toString()});  
+        res.status(400).json({status:"fail",message:err.toString()});  
     }  
 }
 ```
