@@ -9,10 +9,9 @@ const SendEmailUtility = require("../utilites/SendEmailUtility");
 
 // Recover Password 01: Send OTP
 exports.VerifyUserEmail = async (req, res) => {
-    let email = req.params.email;
-    let OTPCode = Math.floor(100000 + Math.random() * 900000); // Generate 6-digit OTP
-
     try {
+	    let email = req.params.email;
+	    let OTPCode = Math.floor(100000 + Math.random() * 900000); // Generate 6-digit OTP
         let user = await UserModel.findOne({ email: email });
 
         if (user) {
@@ -93,7 +92,9 @@ const SendEmailUtility = async (email, OTPCode) => {
                 user: process.env.EMAIL_USER, // Use environment variable
                 pass: process.env.EMAIL_PASS  // Use App Password or SMTP password
             },
-        });
+        });                             
+                                  /*EMAIL_USER=mdabid1152@gmail.com  
+									EMAIL_PASS="glil tckm omuw bvyy"*/
 
         let mailHTML = `
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
@@ -127,4 +128,22 @@ const SendEmailUtility = async (email, OTPCode) => {
 
 module.exports = SendEmailUtility;
 
+```
+
+
+# OTPModel.js
+
+```js
+const mongoose = require('mongoose')  
+const DataSchema= new mongoose.Schema({  
+  
+    email:{type:String,required:true},  
+    otp:String,  
+    status:{type: Number, default: 0},  
+    createdAt:{ type:Date,default:Date.now},  
+  
+},{versionKey:false});  
+  
+const OTPModel = mongoose.model("otps",DataSchema);  
+module.exports = OTPModel;
 ```

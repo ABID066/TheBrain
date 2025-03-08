@@ -75,5 +75,5 @@
 }
 ```
 
-- by adding this line - `"dev": "nodemon index.js"` after 5 lines, it will run the back-end with a single command.
+- by adding this line - (`, "dev": "nodemon index.js" `) after 5 lines, it will run the back-end with a single command.
 - And that is `npm run dev`
