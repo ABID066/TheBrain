@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/Introduction.md",
-                "mode": "preview",
+                "file": "React/React-Redux.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction"
+              "title": "React-Redux"
             }
           },
           {
@@ -208,8 +208,12 @@
   "active": "f6c820eedeb36d09",
   "lastOpenFiles": [
     "React/Notes on Functions Used.md",
-    "Full-Stack  Devlelopment/FrontEnd Development.md",
+    "React/React Dom.md",
+    "React/React Hook.md",
+    "React/React-Redux.md",
+    "React/Introduction.md",
     "React/Conditional Rendering in React.md",
+    "Full-Stack  Devlelopment/FrontEnd Development.md",
     "MongoDB/Basic Query.md",
     "MongoDB/The Aggregate Function.md",
     "Full-Stack  Devlelopment/BackEnd Development/Back End Structure.md",
@@ -224,10 +228,6 @@
     "Mongoose/Just Remember Mongoose.md",
     "Mongoose/Practice Project.md",
     "Mongoose/To Do List Project.md",
-    "React/Introduction.md",
-    "React/React Dom.md",
-    "React/React Hook.md",
-    "React/React-Redux.md",
     "Git & GitHub/Git Diff.md",
     "Git & GitHub/Git Log.md",
     "Express JS/Perfect way to write the Code/ES5.md",

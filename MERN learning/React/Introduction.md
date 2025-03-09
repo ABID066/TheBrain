@@ -48,6 +48,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import 'milligram/dist/milligram.min.css';
 ```
 
+##### Install React-Redux
+
+- `npm install @reduxjs/toolkit`
+- `npm install react-redux`
+
 
 ##### Install All the Dependency
 
