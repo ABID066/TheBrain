@@ -56,4 +56,4 @@ import 'milligram/dist/milligram.min.css';
 
 ##### Install All the Dependency
 
-- `npm install axios bootstrap react react-dom react-hot-toast`
+- `npm install axios bootstrap react react-dom react-hot-toast @reduxjs/toolkit react-redux`

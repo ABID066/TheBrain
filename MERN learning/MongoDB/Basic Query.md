@@ -46,6 +46,16 @@ db.employees.insertMany([
 ]);
 ```
 
+#### Rename
+```js
+use("Inventory")
+
+db.brands.dropIndex("name_1") // Drop the unique index on `name` //if needed use it
+
+db.brands.updateMany({}, { $rename: { "name": "brand_name" } }) // Rename field
+```
+
+
 #### Finding Document
 
 - Fine documents from a collection using the `find` method.
