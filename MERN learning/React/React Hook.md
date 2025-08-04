@@ -50,8 +50,76 @@ export default App;
 
 
 ```
+***OR,***
+```js
+
+import axios from 'axios';
+import { useState } from "react";
+
+const App = () => {
+
+  const [loginData, setLoginData] = useState({ email: "", pass: "", fname: "", lname: "" });
 
 
+  function InputOnChange (e) {
+
+    let key = e.target.name;
+	let value = e.target.value;
+
+    setLoginData(loginData => ({
+    
+		...loginData,
+		[key]: value
+
+    }))};
+
+  
+
+  async function SaveData (e) {
+	 e.preventDefault();
+
+    try {
+
+      const response = await axios.post('https://my-api-endpoint.com/login', loginData);
+	alert(`Data sent: ${JSON.stringify(loginData)}`);
+	console.log(response.data);
+
+    } catch (error) {
+		console.error('There was an error sending the data!', error);
+
+    }
+
+  };
+
+  
+
+  return (
+
+    <div>
+      <ul>
+        <li>Email: {loginData.email}</li>
+        <li>Pass: {loginData.pass}</li>
+        <li>Fname: {loginData.fname}</li>
+        <li>Lname: {loginData.lname}</li>
+      </ul>
+
+      <form onSubmit={SaveData}>
+        <input name="fname" onChange={InputOnChange} type="text" placeholder="first name"/><br/><br/>
+        <input name="lname" onChange={InputOnChange} type="text" placeholder="last name"/><br/><br/>
+        <input name="email" onChange={InputOnChange} type="text" placeholder="email"/><br/><br/>
+        <input name="pass" onChange={InputOnChange} type="text" placeholder="password"/><br/><br/>
+        <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+
+  );
+};
+
+export default App;
+
+
+```
 
 #### Use of `useRef()`:
 
