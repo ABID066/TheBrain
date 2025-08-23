@@ -98,3 +98,6 @@ export default function reducer(tasks, action)
 }
 
 ```
+
+
+![[Pasted image 20250823080423.png]]
