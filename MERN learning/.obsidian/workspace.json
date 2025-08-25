@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/Reducer/Use of useReduce.md",
+                "file": "React/React State & Hook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Use of useReduce"
+              "title": "React State & Hook"
             }
           },
           {
@@ -223,11 +223,11 @@
   },
   "active": "d227cc9540aab80d",
   "lastOpenFiles": [
+    "React/ContextAPI/Use of ContextAPI.md",
+    "React/Reducer/Use of useReduce.md",
     "Pasted image 20250823080423.png",
     "Pasted image 20250823080349.png",
-    "React/ContextAPI/Use of ContextAPI.md",
     "Pasted image 20250823080155.png",
-    "React/Reducer/Use of useReduce.md",
     "React/Reducer/Use of reduce.md",
     "React/React State & Hook.md",
     "React/ContextAPI",
@@ -269,7 +269,6 @@
     "React/Starting",
     "React",
     "Mongoose/Untitled",
-    "Mongoose",
-    "Pasted image 20240501135340.png"
+    "Mongoose"
   ]
 }

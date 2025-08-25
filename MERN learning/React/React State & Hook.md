@@ -1,5 +1,7 @@
 #### Best use of `useSate()`: 
 
+- It re-render when data is updated And change or added  what is changed
+
 ```js
 import { useState } from "react";
 import axios from 'axios';
@@ -125,6 +127,7 @@ export default App;
 
 
 - `useRef` can use to store data of API after calling. So that it doesn't need to recall every time.
+- And it also doesn't re-render every time when data is updated.
 
 ```js
 import React, { useRef } from "react";
